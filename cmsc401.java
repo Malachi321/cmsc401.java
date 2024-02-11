@@ -1,56 +1,29 @@
-// you name here
-import java.util.*;
+// malachi williams
+import java.util.Scanner;
 
-public class cmsc401 {
-    // Make sure your code does not allocate any additional Scanner objects,
-    // that is, there is only one Scanner object per running the whole program.
-    // Using more than one scanner may seem to work when typing in input from keyboard,
-    // but it doesn't work when redirecting the file to be used as input 
-    // (e.g. "type my_input.txt | java cmsc401" in Windows command prompt
-    // or "cat my_input.txt | java cmsc401" in linux or macosx command prompt)
-    private static final Scanner scanner = new Scanner(System.in);
-
-    // Please use these methods to take inputs and write outputs.
-    private static Integer readInt() {
-        return scanner.nextInt();
+public class Main {
+  public static void main(String[] args) {
+    Scanner array = new Scanner(System.in);
+    int sze = array.nextInt();
+    int[] arr = new int[sze];
+    for (int i = 0; i < sze; i++){
+      arr[i] = array.nextInt();
     }
-
-    private static String readString() {
-        return scanner.next();
+   
+    int max = arr[0];
+    int goal = 0;
+    for (int i = 0; i < sze; i++){
+      if (arr[i] > max){
+        goal = max;
+        max = arr[i];
+      }
+      
     }
+    System.out.println(goal);
+   
+    
+  }
 
-    private static Integer[] readIntegerArray(int size) {
-        Integer[] array = new Integer[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = readInt();
-        }
-        return array;
-    }
-
-    private static void printInt(int a) {
-        System.out.println(a);
-    }
-
-    private static void printString(String s) {
-        System.out.println(s);
-    }
-
-    public static void main(String[] args) {
-
-//        // reading an Integer
-//        Integer a = readInt();
-//        // writing int output
-//        printInt(a);
-//
-//        // reading a String
-//        String s = readString();
-//        // writing string output
-//        printString(s);
-//
-//        // reading an Integer Array (you should provide the size)
-//        Integer[] listOfIntegers = readIntegerArray(5);
-
-        // write your code here
-    }
+ 
 }
 
